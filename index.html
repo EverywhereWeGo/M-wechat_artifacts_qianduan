@@ -11,6 +11,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="never">
+    <script src="jquery.min.js"></script>
 
 
     <script nonce="" type="text/javascript">
@@ -20,7 +22,6 @@
         window.logs.pagetime['html_begin'] = (+new Date());
     </script>
     <title>大数据企业应用 </title>
-
     <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">
     <link rel="stylesheet"
           href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile42f400.css">
@@ -40,8 +41,6 @@
 <script nonce="" type="text/javascript">
     String.prototype.html = function (encode) {
         var replace = ["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&yen;", "¥", "&amp;", "&"];
-
-
         var replaceReverse = ["&", "&amp;", "¥", "&yen;", "<", "&lt;", ">", "&gt;", " ", "&nbsp;", '"', "&quot;", "'", "&#39;"];
         var target;
         if (encode) {
@@ -90,7 +89,6 @@
     }
 
 </script>
-
 <script nonce="" type="text/javascript">
     window.no_moon_ls = 0;
 </script>
@@ -101,40 +99,34 @@
         <div class="profile_info_area">
             <div class="profile_info_group">
                 <span class="radius_avatar profile_avatar">
-                                        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM72hU25NIyRTiau8yTpeCZJp3rUkEF1V5tJE65f1icxSegQ/0">
-                                    </span>
+                    <img src="img/logo/e.png">
+                 </span>
                 <div class="profile_info">
                     <strong class="profile_nickname">
-                        大数据企业应用
+                        Everywhere We Go
                     </strong>
-                    <p class="profile_account">微信号: Huisituo_bigdata</p>
                 </div>
             </div>
             <ul class="profile_desc">
                 <li>
-                    <label class="profile_desc_label" for="">功能介绍</label>
-                    <div class="profile_desc_value" title="打造专业化大数据企业应用信息共享平台：分享大数据企业应用原创干货、提供行业实时热点信息。">
-                        打造专业化大数据企业应用信息共享平台：分享大数据企业应用原创干货、提供行业实时热点信息。
+                    <label class="profile_desc_label" for="">今日更新：</label>
+                    <div class="profile_desc_value" title="">
                     </div>
                 </li>
                 <li>
-                    <label class="profile_desc_label" for="">帐号主体</label>
-                    <div class="profile_desc_value"><img class="icon_verify success"
-                                                         src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_verify_success.2x42f400.png">北京慧思拓信息服务有限公司
+                    <label class="profile_desc_label" for=""> </label>
+                    <div class="profile_desc_value" title="">
                     </div>
                 </li>
             </ul>
-
             <div class="profile_opr" style="display:none">
                 <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制微信号</a>
             </div>
-
         </div>
         <div class="weui_category_title">最近10条群发</div>
         <div class="weui_msg_card_list" id="history">
 
         </div>
-        <div class="msg_card_tips">仅显示最近10条群发</div>
 
         <div class="loadmore" style="display:none;" id="js_loading">
             <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
@@ -143,34 +135,7 @@
             <div class="tips_wrp"><span class="tips">已无更多</span></div>
         </div>
     </div>
-    <div id="js_pc_qr_code" class="qr_code_pc_outer">
-        <div class="qr_code_pc_inner">
-            <!--<div class="qr_code_pc">-->
-            <!--<img id="js_pc_qr_code_img" class="qr_code_pc_img"-->
-            <!--src="/rr?timestamp=1559014277&amp;src=3&amp;ver=1&amp;signature=-AgSAmY6wBkzD2vKzlUNMa7ALDrDg*etJZJw8OroPyFG-d-yjJuYpkZp-FD5R5h6Vy*aB-wqvJ5GUJbe0Brf9v3TBkVUv6qJhEdvaq9cRqU=">-->
-            <!--<p>微信扫一扫<br>关注该公众号</p>-->
-            <!--</div>-->
-        </div>
-    </div>
 </div>
-
-<script type="text/javascript">
-    function test() {
-        var result = 0;
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:8093/getList",
-            dataType: 'text',
-            success: function (data) {
-                console.log(data)
-                $(".msg_card_tips").append('<div dataasdasd=' + data + '>asdf</div>');
-            },
-            error: function () {
-                alert("异常！");
-            }
-        });
-    }
-</script>
 
 
 <script nonce="" type="text/javascript">
@@ -265,7 +230,6 @@
             hasReported = true;
         };
 
-
         window.addEventListener('beforeunload', reportResLoadTime, false);
         window.addEventListener('unload', reportResLoadTime, false);
 
@@ -341,103 +305,92 @@ window.moon_map = {
     "history/profile_history.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history4576f8.js",
     "sougou/profile.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile42f400.js"
 };</script>
-<script src="jquery.min.js"></script>
+
 <script type="text/javascript">
     window.__wxgspeeds = {};
     window.__wxgspeeds.moonloadtime = +new Date()
 </script>
 <script type="text/javascript" src="moon42f400.js"></script>
-
-
 <script type="text/javascript">
 
+    function getMyDate(str) {
+        var oDate = new Date(str),
+            oYear = oDate.getFullYear(),
+            oMonth = oDate.getMonth() + 1,
+            oDay = oDate.getDate(),
+            oHour = oDate.getHours(),
+            oMin = oDate.getMinutes(),
+            oSen = oDate.getSeconds(),
+            oTime = oYear + '-' + getzf(oMonth) + '-' + getzf(oDay) + ' ' + getzf(oHour) + ':' + getzf(oMin) + ':' + getzf(oSen);//最后拼接时间
+        return oTime;
+    };
 
-    function test() {
-        var result = 0;
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:8093/getList",
-            dataType: 'text',
-            success: function (data) {
-                console.log(data)
-                $('bdoy:first').append('<div data=' + data + '></div>');//使用一个div标签，定义一个自定义属性data来存储数据
-            },
-            error: function () {
-                alert("异常！");
-            }
-        });
+    //补0操作
+    function getzf(num) {
+        if (parseInt(num) < 10) {
+            num = '0' + num;
+        }
+        return num;
     }
 
 
-    //
-    // var dataa = ""
-    // $.get("http://localhost:8093/getList", function (datab) {
-    //     dataa = datab
-    // });
-    //
-    // console.log(dataa);
+    $.ajax({
+        url: "http://39.105.22.26:8093/getList",
+        dataType: "json",
+        success: function (data) {
+            // console.log(data.length);
+            for (var i = 0; i < data.length; i++) {
+                var title = data[i].app_msg_ext_info.title;
+                var digest = data[i].app_msg_ext_info.digest;
+                var content_url = data[i].app_msg_ext_info.content_url;
+                var content_url1 = "https://mp.weixin.qq.com" + content_url;
+                var datetime = data[i].comm_msg_info.datetime;
+                var id = data[i].comm_msg_info.id;
+                // console.log(title);
+                // console.log(digest);
+                // console.log(datetime);
+                // console.log(cover);
+                // console.log(content_url1);
+                var datetime1 = getMyDate(parseInt(datetime) * 1000);
+                // console.log(datetime1);
 
+                // $(".weui_msg_card_list").append("<div class=\"weui_msg_card\">" +
+                //     "<div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
+                //     "<div class=\"weui_msg_card_bd\">" +
+                //     "<div id=\"WXAPPMSG1000000644\" class=\"weui_media_box appmsg\" msgid=\"1000000644\">" +
+                //     "<span class=\"weui_media_hd\"" +
+                //     " style=\"background-image:url(" + cover + ")\"" +
+                //     "data-s=\"640\" data-t=\"1559389500000\"" +
+                //     "hrefs=\"r8=\"></span>" +
+                //     "<div class=\"weui_media_bd\">" +
+                //     "<h4 class=\"weui_media_title\"" +
+                //     "hrefs=\"asdf\">" + "<a href=" + content_url1 + " style=\"color:red;text-decoration:none;\">" + title + "</a>" +
+                //     "</h4>" +
+                //     "<p class=\"weui_media_desc\"></p>" +
+                //     "<p class=\"weui_media_extra_info\">" + datetime1 + "</p>" +
+                //     "</div>" +
+                //     "</div>" +
+                //     "</div>" +
+                //     "</div>");
 
-    var biz = "MzA3ODYwNTU4Nw==" || "";
-    var src = "3";
-    var ver = "1";
-    var timestamp = "1559014028";
-    var signature = "0NPCb51SzGU07WDQFwcr2FA1T2Oh3K1oBt*e8ds1nQ*hp4Y*ipoAqQC4chmnMSls4FW0JgZWLX4IS8JHq7sGvw==";
-    var name = "Huisituo_bigdata" || "大数据企业应用";
-    var msgList = {
-        "list": [{
-            "app_msg_ext_info": {
-                "del_flag": 1,
-                "copyright_stat": 100,
-                "play_url": "",
-                "author": "小帮",
-                "malicious_content_type": 0,
-                "item_show_type": 0,
-                "title": "程序员，为什么我不建议你买保险？",
-                "content": "",
-                "source_url": "",
-                "cover": "http://mmbiz.qpic.cn/mmbiz_jpg/KyXfCrME6UIGSVPxGicm0Y7bdk18H2uOB2Nlk49hRSzDCw0occzdcWm7uawTY5Zq1xh0qFuXgXzicEVSLXawvQvA/0?wx_fmt=jpeg",
-                "duration": 0,
-                "audio_fileid": 0,
-                "subtype": 9,
-                "digest": "90%的人都买错了",
-                "multi_app_msg_item_list": [{
-                    "del_flag": 1,
-                    "copyright_stat": 100,
-                    "play_url": "",
-                    "author": "刘欣",
-                    "malicious_content_type": 0,
-                    "item_show_type": 0,
-                    "title": "公布一下中奖名单！",
-                    "content": "",
-                    "source_url": "",
-                    "cover": "http://mmbiz.qpic.cn/mmbiz_jpg/KyXfCrME6UIGSVPxGicm0Y7bdk18H2uOBuou2zhicGG3GmPMtNNOkiaWOSnT6OibRTYlMjzSPEMkqQEY8RXbpk2sJw/0?wx_fmt=jpeg",
-                    "duration": 0,
-                    "audio_fileid": 0,
-                    "digest": "上周五的送书活动50本《码农翻身》+50本《统计之美》中奖名单新鲜出炉，感谢大家的积极参与！",
-                    "content_url": "/s?timestamp=1559105083&amp;src=3&amp;ver=1&amp;signature=mW43sirCqX-ozaxIiBRWkpB8Hr5euT-YNJVkRF0grZu06uRol7gPaN3LY7PXbYSq3SC-eavO7qVHJL86QlEBhs8qWKry*0pnxyuxpmte2pidm-2sSGtgkJWxwVot1lBKLOBAAgeL*-2ayyt8tfFLT8uOim2dPIIRLXxNQUyNwTU=",
-                    "malicious_title_reason_id": 0,
-                    "fileid": 518032616
-                }],
-                "content_url": "/s?timestamp=1559105083&amp;src=3&amp;ver=1&amp;signature=mW43sirCqX-ozaxIiBRWkpB8Hr5euT-YNJVkRF0grZu06uRol7gPaN3LY7PXbYSq3SC-eavO7qVHJL86QlEBhs8qWKry*0pnxyuxpmte2pjwrdxSrI4usR9mkGiXvbuQUi38VgsiouoyKao7awA6riOlRBuyU4tFwBh7k5adSBA=",
-                "malicious_title_reason_id": 0,
-                "fileid": 518032609,
-                "is_multi": 1
-            },
-            "comm_msg_info": {
-                "datetime": 1559003400,
-                "fakeid": "3019747116",
-                "id": 1000000640,
-                "type": 49,
-                "content": "",
-                "status": 2
+                $(".weui_msg_card_list").append("<div class=\"weui_msg_card\">" +
+                    "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
+                    "            <div class=\"weui_msg_card_bd\">" +
+                    "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
+                    "                    <span class=\"weui_media_hd\" style=\"background-image:url(img/" + id + ".jpg)\"></span>" +
+                    "                    <div class=\"weui_media_bd\">" +
+                    "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url1 + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
+                    "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
+                    "                        <p class=\"weui_media_extra_info\">" + datetime1 + "</p>" +
+                    "                    </div>" +
+                    "                </div>" +
+                    "            </div>" +
+                    "        </div>");
             }
-        }]
-    };
-
-    seajs.use("sougou/profile.js");
-
+        }
+    });
 </script>
+
 </body>
 </html>
 
