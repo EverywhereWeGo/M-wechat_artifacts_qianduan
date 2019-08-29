@@ -22,9 +22,8 @@
         window.logs.pagetime['html_begin'] = (+new Date());
     </script>
     <title>晨间资讯</title>
-    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">
-    <link rel="stylesheet"
-          href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile42f400.css">
+    <link rel="stylesheet" href="./weui.css">
+    <link rel="stylesheet" href="./sougou_profile42f400.css">
     <!--[if lt IE 9]>
     <link rel="stylesheet" type="text/css"
           href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc42f400.css">
@@ -302,7 +301,7 @@
         "common/utils.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/common/utils4576f8.js",
         "appmsg/cdn_img_lib.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib42f400.js",
         "biz_common/dom/event.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event445789.js",
-        "history/profile_history.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history4576f8.js",
+        "history/profile_history.js": "//res.wx.qq.com/mmbizwa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                p/zh_CN/htmledition/js/history/profile_history4576f8.js",
         "sougou/profile.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile42f400.js"
     };
 </script>
@@ -311,7 +310,6 @@
     window.__wxgspeeds = {};
     window.__wxgspeeds.moonloadtime = +new Date()
 </script>
-<script type="text/javascript" src="moon42f400.js"></script>
 <script type="text/javascript">
 
     function getMyDate(str) {
@@ -341,27 +339,25 @@
         success: function (data) {
             // console.log(data.length);
             for (var i = 0; i < data.length; i++) {
-                var title = data[i].app_msg_ext_info.title;
-                var digest = data[i].app_msg_ext_info.digest;
-                var content_url = data[i].app_msg_ext_info.content_url;
-                var content_url1 = "https://mp.weixin.qq.com" + content_url;
-                var datetime = data[i].comm_msg_info.datetime;
-                var id = data[i].comm_msg_info.id;
-                // console.log(title);
-                // console.log(digest);
-                // console.log(datetime);
+                var title = data[i].title;
+                var digest = "";
+                var content_url = data[i].trueurl;
+                var datetime = 1567094100;
+                var id = 1;
+                console.log(title);
+                console.log(digest);
+                console.log(datetime);
                 // console.log(cover);
-                // console.log(content_url1);
                 var datetime1 = getMyDate(parseInt(datetime) * 1000);
-                // console.log(datetime1);
+                console.log(datetime1);
 
                 $(".weui_msg_card_list").append("<div class=\"weui_msg_card\">" +
                     "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
                     "            <div class=\"weui_msg_card_bd\">" +
                     "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
-                    "                    <span class=\"weui_media_hd\" style=\"background-image:url(img/" + id + ".jpg)\"></span>" +
+                    "                    <span class=\"weui_media_hd\" style=\"background-image:url(img/" + i + ".jpg)\"></span>" +
                     "                    <div class=\"weui_media_bd\">" +
-                    "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url1 + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
+                    "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
                     "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
                     "                        <p class=\"weui_media_extra_info\">" + datetime1 + "</p>" +
                     "                    </div>" +
