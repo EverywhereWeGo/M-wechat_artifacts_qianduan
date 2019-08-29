@@ -1,375 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-    <link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
-    <link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
-    <link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="referrer" content="never">
-    <script src="jquery.min.js"></script>
-
-
-    <script nonce="" type="text/javascript">
-        window.logs = {
-            pagetime: {}
-        };
-        window.logs.pagetime['html_begin'] = (+new Date());
-    </script>
-    <title>晨间资讯</title>
-    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">
-    <link rel="stylesheet"
-          href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile42f400.css">
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css"
-          href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc42f400.css">
-    <![endif]-->
-
+	<title>Blogin | beautiful and Minimal Blog Template  Designed & Coded </title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body id="" class="zh_CN   appmsg_skin_default ">
+<body>
 
-<link rel="dns-prefetch" href="//res.wx.qq.com">
-<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
-<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
-<link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
-<link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
-<script nonce="" type="text/javascript">
-    String.prototype.html = function (encode) {
-        var replace = ["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&yen;", "¥", "&amp;", "&"];
-        var replaceReverse = ["&", "&amp;", "¥", "&yen;", "<", "&lt;", ">", "&gt;", " ", "&nbsp;", '"', "&quot;", "'", "&#39;"];
-        var target;
-        if (encode) {
-            target = replaceReverse;
-        } else {
-            target = replace;
-        }
-        for (var i = 0, str = this; i < target.length; i += 2) {
-            str = str.replace(new RegExp(target[i], 'g'), target[i + 1]);
-        }
-        return str;
-    };
+<header>
+	<div class="wrapper">
+		<a href="#"><img src="img/logo.png" class="h_logo" alt="Blogin" title=""></a>
+		<nav>
+			<ul class="main_nav">
+				<li class="current"><a href="#">Journal</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Work</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header><!-- Header End -->
 
-    window.isInWeixinApp = function () {
-        return /MicroMessenger/.test(navigator.userAgent);
-    };
+<section class="main wrapper">
+	<article>
+		<div class="article_image">
+			<a href="#">
+				<img src="img/pic1.jpg" alt="" title="">
+			</a>
+		</div>
+		<div class="post">
+			<h1 class="title">
+				<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
+			</h1>
 
-    window.getQueryFromURL = function (url) {
-        url = url || 'http://qq.com/s?a=b#rd';
-        var tmp = url.split('?'),
-            query = (tmp[1] || "").split('#')[0].split('&'),
-            params = {};
-        for (var i = 0; i < query.length; i++) {
-            var arg = query[i].split('=');
-            params[arg[0]] = arg[1];
-        }
-        if (params['pass_ticket']) {
-            params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g, "+"));
-        }
-        return params;
-    };
+			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    (function () {
-        var params = getQueryFromURL(location.href);
-        window.uin = params['uin'] || "" || '';
-        window.key = params['key'] || "" || '';
-        window.wxtoken = params['wxtoken'] || '';
-        window.pass_ticket = params['pass_ticket'] || '';
-        window.appmsg_token = "";
-    })();
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
-    function wx_loaderror() {
-        if (location.pathname === '/bizmall/reward') {
-            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
-        }
-    }
+			<a class="read_more" href="#">Continue Reading <i class="read_more_arrow"></i> </a>
+		</div>
+	</article>
 
-</script>
-<script nonce="" type="text/javascript">
-    window.no_moon_ls = 0;
-</script>
+	<article>
+		<div class="article_image">
+			<a href="#">
+				<img src="img/pic2.jpg" alt="" title="">
+			</a>
+		</div>
+		<div class="post">
+			<h1 class="title">
+				<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
+			</h1>
 
+			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<div class="page_profile_info">
-    <div class="page_profile_info_inner">
-        <div class="profile_info_area">
-            <div class="profile_info_group">
-                <!--<span class="radius_avatar profile_avatar">-->
-                    <!--<img src="img/logo/e.png">-->
-                 <!--</span>-->
-                <!--<div class="profile_info">-->
-                    <!--<strong class="profile_nickname">-->
-                        <!--晨间资讯-->
-                    <!--</strong>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<ul class="profile_desc">-->
-                <!--<li>-->
-                    <!--<label class="profile_desc_label" for="">今日更新：</label>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<div class="profile_desc_value" title="">-->
-                        <!--1篇-->
-                    <!--</div>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <div class="profile_opr" style="display:none">
-                <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制微信号</a>
-            </div>
-        </div>
-        <div class="weui_category_title">最近10条群发</div>
-        <div class="weui_msg_card_list" id="history">
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
-        </div>
+			<a class="read_more" href="#">Continue Reading <i class="read_more_arrow"></i> </a>
+		</div>
+	</article>
 
-        <div class="loadmore" style="display:none;" id="js_loading">
-            <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
-        </div>
-        <div class="loadmore with_line" style="display:none;" id="js_nomore">
-            <div class="tips_wrp"><span class="tips">已无更多</span></div>
-        </div>
-    </div>
-</div>
+	<article>
+		<div class="article_image">
+			<a href="#">
+				<img src="img/pic3.jpg" alt="" title="">
+			</a>
+		</div>
+		<div class="post">
+			<h1 class="title">
+				<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
+			</h1>
 
+			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<script nonce="" type="text/javascript">
-    (function () {
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
-        var ajaxWhiteList = {
-            1: {
-                reg: /^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsg_like/,
-                times: 0
-            },
-            2: {
-                reg: /^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsg_comment((\?|&)[^=]*?=[^&]*?)*?(\?|&)action=likecomment/,
-                times: 0
-            },
-            3: {
-                reg: /^https?:\/\/mp\.weixin\.qq\.com\/mp\/appmsg_comment((\?|&)[^=]*?=[^&]*?)*?(\?|&)action=addcomment/,
-                times: 0
-            },
-            4: {
-                reg: /^https?:\/\/mp\.weixin\.qq\.com\/mp\/authorreward/,
-                times: 0
-            }
+			<a class="read_more" href="#">Continue Reading <i class="read_more_arrow"></i> </a>
+		</div>
+	</article>
 
+	<nav class="pagination">
+		<a href="#" class="previous"><i></i>Previous</a>
+		<a href="#" class="next">Next<i></i></a>
+	</nav><!-- Pagination End -->
+</section><!-- Main End -->
 
-        };
-
-
-        if (!performance || !performance.getEntries) return;
-
-
-        var hasReported = false;
-
-
-        var reportResLoadTime = function () {
-
-            if (hasReported) return;
-
-
-            var notSupport = false;
-
-
-            var ajaxEntries = [];
-
-
-            var entries = performance.getEntries().map(function (entry) {
-                if (typeof entry !== 'object') {
-                    notSupport = true;
-                } else if (entry.entryType === undefined) {
-                    notSupport = true;
-                } else if (
-                    entry.entryType !== 'navigation' &&
-                    entry.entryType !== 'resource'
-                ) {
-
-                    return null;
-                } else if (entry.initiatorType === undefined) {
-                    notSupport = true;
-                } else if (entry.initiatorType === 'xmlhttprequest') {
-
-                    if (entry.name === undefined || entry.duration === undefined) {
-                        notSupport = true;
-                    } else {
-                        for (var scene in ajaxWhiteList) {
-                            if (Object.prototype.hasOwnProperty.call(ajaxWhiteList, scene)) {
-                                var ajaxItem = ajaxWhiteList[scene];
-                                if (ajaxItem.times < 10 && ajaxItem.reg.test(entry.name)) {
-                                    ajaxEntries.push({
-                                        scene: scene,
-                                        protocol: entry.nextHopProtocol,
-                                        is_https: isHttps(entry),
-                                        time: entry.duration
-                                    });
-                                    ajaxItem.times++;
-                                }
-                            }
-                        }
-                    }
-                    return null;
-                }
-                return entry;
-            });
-
-
-            if (notSupport || ajaxEntries.length === 0) return;
-
-
-            var data = {
-                stat_list: ajaxEntries
-            };
-            var img = new Image();
-            img.src = 'https://mp.weixin.qq.com/mp/timereport?data=' + JSON.stringify(data);
-            hasReported = true;
-        };
-
-        window.addEventListener('beforeunload', reportResLoadTime, false);
-        window.addEventListener('unload', reportResLoadTime, false);
-
-        function isHttps(entry) {
-            if (/^https/.test(entry.name)) return 1;
-            else return 0;
-        }
-    })();
-</script>
-<script nonce="">
-    var __DEBUGINFO = {
-        debug_js: "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console42f400.js",
-        safe_js: "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe42f400.js",
-        res_list: []
-    };
-</script>
-
-<script nonce="" type="text/javascript">
-    (function () {
-        var totalCount = 0,
-            finishCount = 0;
-
-        function _loadVConsolePlugin() {
-            window.vConsole = new window.VConsole();
-            while (window.vConsolePlugins.length > 0) {
-                var p = window.vConsolePlugins.shift();
-                window.vConsole.addPlugin(p);
-            }
-        }
-
-        function _addVConsole(uri, cb) {
-            totalCount++;
-            var node = document.createElement('SCRIPT');
-            node.type = 'text/javascript';
-            node.src = uri;
-            node.setAttribute('nonce', '');
-            if (cb) {
-                node.onload = cb;
-            }
-            document.getElementsByTagName('head')[0].appendChild(node);
-        }
-
-        if (
-            (document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
-            || location.href.indexOf('vconsole=1') > -1
-        ) {
-            window.vConsolePlugins = [];
-            _addVConsole('//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.2.2/vconsole.min440203.js', function () {
-
-                _addVConsole('//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/plugin/vconsole-mpopt/1.0.1/vconsole-mpopt42f400.js', _loadVConsolePlugin);
-            });
-        }
-    })();
-</script>
-
-<script>window.__moon_host = 'res.wx.qq.com';
-window.moon_map = {
-    "biz_wap/utils/ajax_wx.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax_wx42f400.js",
-    "biz_common/utils/respTypes.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes42f400.js",
-    "biz_common/template-2.0.1-cmd.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/template-2.0.1-cmd42f400.js",
-    "biz_common/utils/url/parse.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse440451.js",
-    "biz_wap/jsapi/core.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core45fdbf.js",
-    "biz_wap/utils/mmversion.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/mmversion45fc7f.js",
-    "biz_common/dom/class.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class42f400.js",
-    "biz_common/utils/string/emoji.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/emoji42f400.js",
-    "biz_wap/utils/ajax.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax42f400.js",
-    "history/profile_history.html.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history.html42f400.js",
-    "biz_common/utils/string/html.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html42f400.js",
-    "history/template_helper.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/template_helper42f400.js",
-    "common/utils.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/common/utils4576f8.js",
-    "appmsg/cdn_img_lib.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib42f400.js",
-    "biz_common/dom/event.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event445789.js",
-    "history/profile_history.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history4576f8.js",
-    "sougou/profile.js": "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile42f400.js"
-};</script>
-
-<script type="text/javascript">
-    window.__wxgspeeds = {};
-    window.__wxgspeeds.moonloadtime = +new Date()
-</script>
-<script type="text/javascript" src="moon42f400.js"></script>
-<script type="text/javascript">
-
-    function getMyDate(str) {
-        var oDate = new Date(str),
-            oYear = oDate.getFullYear(),
-            oMonth = oDate.getMonth() + 1,
-            oDay = oDate.getDate(),
-            oHour = oDate.getHours(),
-            oMin = oDate.getMinutes(),
-            oSen = oDate.getSeconds(),
-            oTime = oYear + '-' + getzf(oMonth) + '-' + getzf(oDay) + ' ' + getzf(oHour) + ':' + getzf(oMin) + ':' + getzf(oSen);//最后拼接时间
-        return oTime;
-    };
-
-    //补0操作
-    function getzf(num) {
-        if (parseInt(num) < 10) {
-            num = '0' + num;
-        }
-        return num;
-    }
-
-
-    $.ajax({
-        url: "http://39.105.22.26:8093/getList",
-        dataType: "json",
-        success: function (data) {
-            // console.log(data.length);
-            for (var i = 0; i < data.length; i++) {
-                var title = data[i].app_msg_ext_info.title;
-                var digest = data[i].app_msg_ext_info.digest;
-                var content_url = data[i].app_msg_ext_info.content_url;
-                var content_url1 = "https://mp.weixin.qq.com" + content_url;
-                var datetime = data[i].comm_msg_info.datetime;
-                var id = data[i].comm_msg_info.id;
-                // console.log(title);
-                // console.log(digest);
-                // console.log(datetime);
-                // console.log(cover);
-                // console.log(content_url1);
-                var datetime1 = getMyDate(parseInt(datetime) * 1000);
-                // console.log(datetime1);
-
-                $(".weui_msg_card_list").append("<div class=\"weui_msg_card\">" +
-                    "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
-                    "            <div class=\"weui_msg_card_bd\">" +
-                    "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
-                    "                    <span class=\"weui_media_hd\" style=\"background-image:url(img/" + id + ".jpg)\"></span>" +
-                    "                    <div class=\"weui_media_bd\">" +
-                    "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url1 + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
-                    "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
-                    "                        <p class=\"weui_media_extra_info\">" + datetime1 + "</p>" +
-                    "                    </div>" +
-                    "                </div>" +
-                    "            </div>" +
-                    "        </div>");
-            }
-        }
-    });
-</script>
+<footer>
+	<div class="wrapper">
+		<img class="logo_footer" src="img/logo_footer.png" alt="Blogin" title="">
+		<p class="rights">© 2014 Blogin.com  -  All Rights Reserved  -  More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> </p>
+		<ul class="social_profiles">
+			<li class="f"><a href="#" target="_blink"></a></li>
+			<li class="t"><a href="#" target="_blink"></a></li>
+			<li class="be"><a href="#" target="_blink"></a></li>
+			<li class="d"><a href="#" target="_blink"></a></li>
+		</ul>
+	</div>
+</footer><!-- Footer End -->
 
 </body>
 </html>
-
