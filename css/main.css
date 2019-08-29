@@ -111,14 +111,17 @@ ul.main_nav li a:hover{
 }
 
 .main .article_image{
-	width: 470px;
-	margin-right: 40px;
+	width: 300px;
+	height: 120px;
 }
 
 
 .main .post{
-	width: 430px;
 	float: left;
+	margin-right: 20px;
+	margin-left: 20px;
+	width: 630px;
+
 }
 
 .main .post h1.title,
