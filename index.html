@@ -118,8 +118,8 @@
     }
 
     $.ajax({
-        // url: "http://localhost:8093/getList",
-        url: "http://39.105.22.26:8093/getList",
+        url: "http://localhost:8093/getList",
+        // url: "http://39.105.22.26:8093/getList",
         dataType: "json",
         success: function (data) {
             // console.log(data.length);
@@ -142,7 +142,7 @@
                         "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
                         "            <div class=\"weui_msg_card_bd\">" +
                         "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
-                        "                    <div class='aaaaa'><span class=\"weui_media_hd\" style=\"background-image:url(" + picurl + ")\"></span></div>" +
+                        "                    <span class=\"weui_media_hd\" style=\"background-image:url(" + picurl + ")\"></span>" +
                         "                    <div class=\"weui_media_bd\">" +
                         "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
                         "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
@@ -156,7 +156,7 @@
                         "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
                         "            <div class=\"weui_msg_card_bd\">" +
                         "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
-                        "                    <div class='aaaaa' style='text-align: center'><span class=\"weui_media_hd\" style=\"background-image:url(" + picurl + ")\"></span></div>" +
+                        "                    <span class=\"weui_media_hd\" style=\"background-image:url(" + picurl + ")\"></span>" +
                         "                    <div class=\"weui_media_bd\">" +
                         "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
                         "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
@@ -174,18 +174,31 @@
 
 
 <script type="text/javascript">
-    $("body").on({
+    $("#section-underline-1,#section-underline-2").on({
         mouseenter: function () {
-            console.log("asdfasdf");
             var initurl = $(this).css('background-image');
             $("#myvalue").attr("initurl", initurl);
-            $(this).css('background-image', 'url(03.shouchang/images/7.jpg)');
+            $(this).css('background-image', 'url(03.shouchang/images/asdfasdf.png)');
+            $(this).attr("onclick", 'myclick()');
         },
         mouseleave: function () {
-            console.log("bbbbb");
             $(this).css('background-image', $("#myvalue").attr("initurl"));
+            $(this).attr("onclick", "");
         }
     }, ".weui_media_hd");
+</script>
+
+<script type="text/javascript">
+    function myclick() {
+        var picnum = $("#myvalue").attr("initurl");
+        console.log(picnum)
+        $.ajax({
+            url: "http://localhost:8093/collect",
+            // url: "http://39.105.22.26:8093/collect",
+            data: {"picnum": picnum},
+            dataType: "json",
+        })
+    }
 </script>
 
 </body>
