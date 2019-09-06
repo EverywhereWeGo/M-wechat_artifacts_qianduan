@@ -179,6 +179,8 @@
         mouseenter: function () {
             var initurl = $(this).css('background-image');
             $("#myvalue").attr("initurl", initurl);
+        },
+        click: function () {
             $(this).css('background-image', 'url(img/logo/shouchang.png)');
             $(this).attr("onclick", 'myclick(this)');
         },
@@ -207,7 +209,8 @@
                     alert("收藏失败")
                 }
             },
-        })
+        });
+        console.log($(this))
     }
 </script>
 
