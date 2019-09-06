@@ -134,6 +134,7 @@
                 console.log(digest);
                 console.log(content_url);
                 console.log(datasource);
+                console.log(picurl);
                 // console.log(cover);
                 var datetime1 = getMyDate(parseInt(datetime) * 1000);
                 console.log(datetime1);
@@ -190,7 +191,6 @@
 
 <script type="text/javascript">
     function myclick(aa) {
-        console.log(aa)
         var picnum = $("#myvalue").attr("initurl");
         picnum = picnum.substring(picnum.indexOf("wechat_artifacts_qianduan/") + "wechat_artifacts_qianduan/".length, picnum.lastIndexOf("\")"))
         console.log(picnum)
@@ -198,7 +198,16 @@
             // url: "http://localhost:8093/collect",
             url: "http://39.105.22.26:8093/collect",
             data: {"picnum": picnum},
-            dataType: "json",
+            dataType: "text",
+            success: function (data) {
+                console.log("success");
+                console.log(data);
+                if (data === 200) {
+                    alert("收藏成功")
+                } else {
+                    alert("收藏失败")
+                }
+            },
         })
     }
 </script>
