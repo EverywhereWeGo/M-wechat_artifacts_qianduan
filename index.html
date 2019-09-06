@@ -192,7 +192,7 @@
 <script type="text/javascript">
     function myclick(aa) {
         var picnum = $("#myvalue").attr("initurl");
-        picnum = picnum.substring(picnum.indexOf("wechat_artifacts_qianduan/") + "wechat_artifacts_qianduan/".length, picnum.lastIndexOf("\")"))
+        picnum = picnum.substring(picnum.indexOf("img/"), picnum.lastIndexOf("\")"))
         console.log(picnum)
         $.ajax({
             // url: "http://localhost:8093/collect",
@@ -200,9 +200,8 @@
             data: {"picnum": picnum},
             dataType: "text",
             success: function (data) {
-                console.log("success");
                 console.log(data);
-                if (data === 200) {
+                if (data === "200") {
                     alert("收藏成功")
                 } else {
                     alert("收藏失败")
