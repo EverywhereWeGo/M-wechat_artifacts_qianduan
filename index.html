@@ -118,8 +118,8 @@
     }
 
     $.ajax({
-        url: "http://localhost:8093/getList",
-        // url: "http://39.105.22.26:8093/getList",
+        // url: "http://localhost:8093/getList",
+        url: "http://39.105.22.26:8093/getList",
         dataType: "json",
         success: function (data) {
             // console.log(data.length);
@@ -178,8 +178,8 @@
         mouseenter: function () {
             var initurl = $(this).css('background-image');
             $("#myvalue").attr("initurl", initurl);
-            $(this).css('background-image', 'url(03.shouchang/images/asdfasdf.png)');
-            $(this).attr("onclick", 'myclick()');
+            $(this).css('background-image', 'url(img/logo/shouchang.png)');
+            $(this).attr("onclick", 'myclick(this)');
         },
         mouseleave: function () {
             $(this).css('background-image', $("#myvalue").attr("initurl"));
@@ -189,17 +189,60 @@
 </script>
 
 <script type="text/javascript">
-    function myclick() {
+    function myclick(aa) {
+        console.log(aa)
         var picnum = $("#myvalue").attr("initurl");
+        picnum = picnum.substring(picnum.indexOf("wechat_artifacts_qianduan/") + "wechat_artifacts_qianduan/".length, picnum.lastIndexOf("\")"))
         console.log(picnum)
         $.ajax({
-            url: "http://localhost:8093/collect",
-            // url: "http://39.105.22.26:8093/collect",
+            // url: "http://localhost:8093/collect",
+            url: "http://39.105.22.26:8093/collect",
             data: {"picnum": picnum},
             dataType: "json",
         })
     }
 </script>
+
+
+<script type="text/javascript">
+    $.ajax({
+        // url: "http://localhost:8093/getcollect",
+        url: "http://39.105.22.26:8093/getcollect",
+        dataType: "json",
+        success: function (data) {
+            // console.log(data.length);
+            for (var i = 0; i < data.length; i++) {
+                var title = data[i].title;
+                var digest = data[i].abstract;
+                var content_url = data[i].trueurl;
+                var datetime = 1567094100;
+                var datasource = data[i].datasource;
+                var picurl = data[i].picurl;
+                console.log(title);
+                console.log(digest);
+                console.log(content_url);
+                console.log(datasource);
+                // console.log(cover);
+                var datetime1 = getMyDate(parseInt(datetime) * 1000);
+                console.log(datetime1);
+                $(".weui_msg_card_list3").append("<div class=\"weui_msg_card\">" +
+                    "            <div class=\"weui_msg_card_hd\">" + datetime1 + "</div>" +
+                    "            <div class=\"weui_msg_card_bd\">" +
+                    "                <div id=\"WXAPPMSG1000000718\" class=\"weui_media_box appmsg\" >" +
+                    "                    <span class=\"weui_media_hd\" style=\"background-image:url(" + picurl + ")\"></span>" +
+                    "                    <div class=\"weui_media_bd\">" +
+                    "                        <h4 class=\"weui_media_title\">" + "<a href=" + content_url + " style=\"color:black;text-decoration:none;\">" + title + "</a>" + "</h4>" +
+                    "                        <p class=\"weui_media_desc\">" + digest + "</p>" +
+                    "                        <p class=\"weui_media_extra_info\">" + datetime1 + "</p>" +
+                    "                    </div>" +
+                    "                </div>" +
+                    "            </div>" +
+                    "        </div>");
+            }
+        }
+    });
+</script>
+
 
 </body>
 </html>
